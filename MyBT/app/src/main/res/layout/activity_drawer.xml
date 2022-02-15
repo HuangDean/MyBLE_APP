@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTheme"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/side_title"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_16" />
+    </androidx.appcompat.widget.Toolbar>
+    <ProgressBar
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_alignBaseline="@id/toolbar"
+        android:layout_alignTop="@id/toolbar"
+        android:layout_alignEnd="@id/toolbar"
+        android:layout_alignBottom="@id/toolbar"
+        android:layout_marginEnd="@dimen/dp_16" />
+
+    <TextView
+        android:id="@+id/tvLastConnectTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="side_last_connect"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvDeviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLastConnectTitle"
+        android:layout_alignStart="@id/tvLastConnectTitle"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text=""
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvDeviceMacAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDeviceName"
+        android:layout_alignStart="@id/tvLastConnectTitle"
+        android:text=""
+        android:textSize="@dimen/sp_16" />
+
+    <Button
+        android:id="@+id/btnQuickConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDeviceMacAddress"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:enabled="false"
+        android:text="quick_connect"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_14" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBleDevice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnQuickConnect"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:overScrollMode="never"
+        tools:itemCount="4"
+        tools:listitem="@layout/adapter_ble_device" />
+
+
+</RelativeLayout>

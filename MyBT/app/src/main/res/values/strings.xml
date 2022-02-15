@@ -1,0 +1,364 @@
+<resources>
+    <string name="app_name">SUNYEH</string>
+
+    <string name="main_rpm">RPM</string>
+    <string name="main_version">Version V1.0</string>
+    <string name="main_open">Open</string>
+    <string name="main_stop">Stop</string>
+    <string name="main_close">Close</string>
+
+    <string name="side_title">Device List</string>
+    <string name="side_last_connect">Last Connect：</string>
+    <string name="side_quick_connect">Quick Connect</string>
+
+    <string name="login">login</string>
+    <string name="login_device_name">Device Name</string>
+    <string name="login_user_name">Permission Level</string>
+    <string name="login_password">Password</string>
+    <string name="login_cancel">Cancel</string>
+    <string name="login_password_empty">Enter Password</string>
+
+    <string name="status_title_maintain">Maintenance</string>
+
+    <string name="status_code">Code</string>
+    <string name="status_code_content">Message</string>
+
+    <string name="status_title_system">Status</string>
+    <string-array name="status_array">
+        <item>Ready</item>
+        <item>Emergency Function Active</item>
+        <item>Fault</item>
+        <item>Limit Setting Complete</item>
+        <item>Manual OP Active</item>
+        <item>Remote Control  Active</item>
+        <item>Fully-closed Position</item>
+        <item>Fully-open Position</item>
+        <item>Close Overload</item>
+        <item>Open Overload</item>
+        <item>Manual OP Active</item>
+        <item>Remote Control  Active</item>
+        <item>Run to Preset Position (Signal Failure)</item>
+        <item>ESD Active</item>
+        <item>Motor Overheat - RPM Limit</item>
+        <item>Motor Ooverheat - Stop</item>
+        <item>Maintenance Required</item>
+        <item>Bluetooth Connecting</item>
+        <item>Retrying</item>
+        <item>Retrying Reverse OP</item>
+        <item></item>
+    </string-array>
+
+    <string name="status_title_error">Warning Message</string>
+    <string-array name="error_array">
+        <item>LCD Overheat</item>
+        <item>MainBoard Overheat</item>
+        <item>Motor Overheat - RPM Limit</item>
+        <item>Motor Ooverheat - Stop</item>
+        <item>Driver Overheat</item>
+        <item>Battery Low</item>
+        <item>Battery Missing</item>
+        <item>Power Supply Fault</item>
+        <item>Phase Loss</item>
+        <item>Overvoltage</item>
+        <item>Undervoltage</item>
+        <item>Over Limit Range</item>
+        <item>Torque Overload</item>
+        <item>Encoder Fault</item>
+        <item>Motor Temp. Fault</item>
+        <item>LCD Temp. Fault</item>
+        <item>MainBoard Temp. Fault</item>
+        <item>Manual OP Fault</item>
+        <item>Digital Input Fault</item>
+        <item>Digital Output Fault</item>
+        <item>Analog Input Fault</item>
+        <item>Analog Output Fault</item>
+        <item>EEPROM Fault</item>
+        <item>Driver Comm. Error</item>
+        <item>Modbus Comm. Error</item>
+        <item>Motor Drive Fault</item>
+        <item>Ctrl. Power Fault</item>
+        <item>Profibus Comm. Error</item>
+        <item>Spare  Encoder Fault</item>
+        <item>Position Detect Error</item>
+    </string-array>
+
+    <string name="maintain_system_working">Cum. Boot time</string>
+    <string name="maintain_motor_working">Motor Cum. Runtime</string>
+    <string name="maintain_system_working_hours">Cum. Boot time: %02dD/%02dh/%02dm/%02ds</string>
+    <string name="maintain_motor_working_hours">Motor Cum. Runtime: %02dD/%02dh/%02dm/%02ds</string>
+    <string name="maintain_date_format">%02dD/%02dh/%02dm/%02ds</string>
+    <string name="maintain_day">Day</string>
+    <string name="maintain_hours">Hour</string>
+    <string name="maintain_min">Min.</string>
+    <string name="maintain_sec">Sec.</string>
+    <string name="maintain_count">times</string>
+    <string name="maintain_torque_remaining_times">Overtorques till Due</string>
+    <string name="maintain_valve_remaining_times">Starts till Due</string>
+    <string name="maintain_motor_remaining_times">Motor Runtime till Due</string>
+    <string name="maintain_total_torque_off_count">Cum. Overtorque Nos.</string>
+    <string name="maintain_total_valve_on_count">Cum. Starts-Open</string>
+    <string name="maintain_total_valve_off">Cum. Starts-Close</string>
+    <string name="maintain_total_torque_all_on">Cum. Starts-Fully Close</string>
+    <string name="maintain_total_torque_all_off">Cum. Starts-Fully Open</string>
+
+    <string name="monitor_title">Real Time Monitor</string>
+    <string name="monitor_time_line">Timeline</string>
+    <string name="monitor_timer">Sampling Frequency (s)</string>
+    <string name="monitor_position">Percentage\nof\nPosition</string>
+    <string name="monitor_rpm">RPM</string>
+    <string name="monitor_torque">Torque</string>
+    <string name="monitor_mortor_tempeature">Motor\nTemperature</string>
+    <string name="monitor_module_tempeature">Driver\nTemperature</string>
+
+    <string name="remote_title">Remote Control</string>
+
+    <string name="setting_title">System Settings</string>
+    <string name="setting_product_config">Product Information</string>
+    <string name="setting_maintain_config">Set Maintenance Due</string>
+    <string name="setting_system_config">Control System Settings</string>
+    <string name="setting_ungent_config">Emergency Setting</string>
+    <string name="setting_switch_config">Close / Open Setting</string>
+    <string name="setting_control_mode_config">Systme Control Setting</string>
+    <string name="setting_output_config">Relay Contact Setting</string>
+
+    <string-array name="product_title">
+        <item>Modbus Address</item>
+        <item>Modbus BaudRate</item>
+        <item>Profibus Address</item>
+        <item>Gearbox</item>
+        <item>(Sun Yeh) Model No.</item>
+        <item>(Sun Yeh) Serial No.</item>
+        <item>Model No.</item>
+        <item>Serial No.</item>
+    </string-array>
+
+    <string-array name="product_title2">
+        <item>Modbus Address</item>
+        <item>Modbus BaudRate</item>
+        <item>Profibus Address</item>
+        <item>Model No.</item>
+        <item>Serial No.</item>
+    </string-array>
+
+    <string name="product_config_modbus_id">Modbus Address</string>
+    <string name="product_config_baund_rate">Modbus BaudRate</string>
+    <string name="product_config_profibus_address">Profibus Address</string>
+    <string name="product_config_gear">Gearbox</string>
+    <string name="product_config_oem_type">(Sun Yeh) Model No.</string>
+    <string name="product_config_oem_serial">(Sun Yeh) Serial No.</string>
+    <string name="product_config_dealer_type">Model No.</string>
+    <string name="product_config_dealer_serial">Serial No.</string>
+    <string name="product_detect_title">Module</string>
+    <string name="product_detect_board_ai">A/I</string>
+    <string name="product_detect_board_di">D/I</string>
+    <string name="product_detect_board_modbus">Modbus</string>
+    <string name="product_detect_board_hart">HART</string>
+    <string name="product_detect_board_ao">A/O</string>
+    <string name="product_detect_board_do">D/O</string>
+    <string name="product_detect_board_profibuso">Profibus</string>
+
+    <string-array name="maintain_title">
+        <item>Starting Nos.</item>
+        <item>Torque Overload Nos.</item>
+        <item>Operating Hours</item>
+    </string-array>
+
+    <string name="maintain_config_title">Set Maintenance Due</string>
+    <string name="maintain_config_switchTimes">Starting Nos.</string>
+    <string name="maintain_config_torqueTimes">Torque Overload Nos.</string>
+    <string name="maintain_config_motorWorkTime">Operating Hours</string>
+
+    <string-array name="system_title">
+        <item>Language</item>
+        <item>Lamp Color for Close</item>
+        <item>Max. Torque</item>
+        <item>Phase</item>
+        <item>Supply Voltage</item>
+    </string-array>
+
+    <string-array name="system_title2">
+        <item>Language</item>
+        <item>Lamp Color for Close</item>
+    </string-array>
+
+
+    <string name="system_config_title">Control System Settings</string>
+    <string name="system_config_english">English</string>
+    <string name="system_config_chinese_traditional">繁體中文</string>
+    <string name="system_config_chinese_simplified">簡體中文</string>
+    <string name="system_config_red_light">Red</string>
+    <string name="system_config_red_green">Green</string>
+    <string name="system_config_three_phase">Three Phase Voltage</string>
+    <string name="system_config_signle_phase">Single Phase Voltage</string>
+    <string name="system_config_language">Language</string>
+    <string name="system_config_lightDefinition">Lamp Color for Close</string>
+    <string name="system_config_max_output_torque">Max. Torque</string>
+    <string name="system_config_ac_voltage_phase">Phase</string>
+    <string name="system_config_ac_voltage_config">Supply Voltage</string>
+
+    <string-array name="ungent_title">
+        <item>Signal Fault Action</item>
+        <item>Emergency Action</item>
+        <item>Signal Fault Position</item>
+        <item>Motor Thermal Alarm</item>
+    </string-array>
+
+    <string name="ungent_config_title">Emergency Setting</string>
+    <string name="ungent_config_open_signal_action1">Stay Put</string>
+    <string name="ungent_config_open_signal_action2">Fail-safe Position</string>
+    <string name="ungent_config_open_signal_action3">Preset Position</string>
+    <string name="ungent_config_ungent_action1">Run to Fully Closed</string>
+    <string name="ungent_config_ungent_action2">Run to Fully Open</string>
+    <string name="ungent_config_ungent_action3">Stop Running</string>
+    <string name="ungent_config_ungent_action4">Disable ESD Signal</string>
+    <string name="ungent_config_open_signal_action">Signal Fault Action</string>
+    <string name="ungent_config_ungent_action">Emergency Action</string>
+    <string name="ungent_config_signal_ungent_position">Signal Fault Position</string>
+    <string name="ungent_config_motorWarning_tempeature">Motor Thermal Alarm</string>
+    <string name="ungent_config_ungent_intput_mode">Emergency Signal Setting</string>
+
+    <string name="switch_config_title">Close/Open Setting</string>
+    <string name="switch_config_range_of_end_mode1">Torque Seating</string>
+    <string name="switch_config_range_of_end_mode2">Travel Seating</string>
+    <string name="switch_config_output_rpm">RPM Setting</string>
+    <string name="switch_config_ungent_rpm">Emergency RPM Setting</string>
+    <string name="switch_config_range_of_end">Travel Limit</string>
+    <string name="switch_config_limit">Limit Parameter Value</string>
+    <string name="switch_config_torque_retry">Jam Clearance Retries</string>
+    <string name="switch_config_range_of_end_mode">Seating Type</string>
+    <string name="switch_config_range_of_end_torque">Torque Limit</string>
+    <string name="switch_config_stroke_torque">Torque Limit - Middle</string>
+    <string name="switch_config_close_tightly">Close Tightly</string>
+    <string name="switch_config_close_definition">Close Direction</string>
+    <string name="switch_config_close">Close</string>
+    <string name="switch_config_open">Open</string>
+
+    <string-array name="switch_torque_retry_list">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="switch_range_of_end_mode_list">
+        <item>Torque Seating</item>
+        <item>Travel Seating</item>
+    </string-array>
+
+    <string-array name="switch_range_of_end_torque_list">
+        <item>30%</item>
+        <item>40%</item>
+        <item>50%</item>
+        <item>60%</item>
+        <item>70%</item>
+        <item>80%</item>
+        <item>90%</item>
+        <item>100%</item>
+    </string-array>
+
+    <string-array name="switch_config_close_definition">
+        <item>CCW</item>
+        <item>CW</item>
+    </string-array>
+
+    <string name="control_mode_config_title">Systme Control Setting</string>
+    <string name="control_mode_config_remote_control_mode">Remote Control Setting</string>
+    <string name="control_mode_config_input_sensitivity">Set A/I Sensitivity</string>
+    <string name="control_mode_config_digital_input">Digital Input Channel</string>
+    <string name="control_mode_config_proportional_input">Analog Input Channel</string>
+    <string name="control_mode_config_proportional_output">Analog Output Channel</string>
+    <string name="control_mode_config_input_config">A/I Signal Type</string>
+    <string name="control_mode_config_output_config">A/O Signal Type</string>
+    <string name="control_mode_config_signal_input_mode1">Analog Signal Type (CH1)</string>
+    <string name="control_mode_config_signal_input_mode2">Analog Signal Type (CH2)</string>
+
+    <string-array name="control_mode_remote_list">
+        <item>Digital Permanent</item>
+        <item>Digital Pulse Input</item>
+        <item>Analog Input</item>
+        <item>Modbus</item>
+        <item>Profibus</item>
+    </string-array>
+
+    <string-array name="control_mode_list">
+        <item>0~20mA</item>
+        <item>4~20mA</item>
+        <item>0~5V</item>
+        <item>1~5V</item>
+        <item>0~10V</item>
+        <item>2~10V</item>
+    </string-array>
+
+    <string name="output_config_title">Relay Contact Setting</string>
+    <string name="output_config_output_config_mode_1">Disabled</string>
+    <string name="output_config_output_config_mode_2">Run to Fully Closed</string>
+    <string name="output_config_output_config_mode_3">Run to Fully Open</string>
+    <string name="output_config_output_config_mode_4">Torque Trip-CL Mid.</string>
+    <string name="output_config_output_config_mode_5">Torque Trip- OP Mid.</string>
+    <string name="output_config_output_config_mode_6">Torque Trip</string>
+    <string name="output_config_output_config_mode_7">Fault</string>
+    <string name="output_config_output_config_mode_8">Signal Flash</string>
+    <string name="output_config_output_config_mode_9">Ready</string>
+    <string name="output_config_output_config_mode_10">Remote Selected</string>
+    <string name="output_config_output_config_mode_11">Motor Overheat-Stop</string>
+    <string name="output_config_output_config_mode_12">Motor Overheat</string>
+    <string name="output_config_output_config_mode_13">Maintenance Due</string>
+    <string name="output_config_output_config_mode_14">Closing</string>
+    <string name="output_config_output_config_mode_15">Opening</string>
+    <string name="output_config_output_config_mode_16">D/I Module Fault</string>
+    <string name="output_config_output_config_mode_17">A/I Module Fault</string>
+    <string name="output_config_output">Relay Contact</string>
+    <string name="output_config_digital_output_channel">數位輸出通道</string>
+
+    <string-array name="output_config_list">
+        <item>Disabled</item>
+        <item>Run to Fully Closed</item>
+        <item>Run to Fully Open</item>
+        <item>Torque Trip-CL Mid.</item>
+        <item>Torque Trip- OP Mid.</item>
+        <item>Torque Trip</item>
+        <item>Fault</item>
+        <item>Signal Flash</item>
+        <item>Ready</item>
+        <item>Remote Selected</item>
+        <item>Motor Overheat-Stop</item>
+        <item>Motor Overheat</item>
+        <item>Maintenance Due</item>
+        <item>Closing</item>
+        <item>Opening</item>
+        <item>D/I Module Fault</item>
+        <item>A/I Module Fault</item>
+    </string-array>
+
+    <string name="config_sent">Sent</string>
+    <string name="config_placeholder">Please Select</string>
+    <string name="config_off">Disable</string>
+    <string name="config_on">Enable</string>
+    <string name="config_determine">Confirmed</string>
+    <string name="config_no">NO</string>
+    <string name="config_nc">NC</string>
+
+    <string name="ble_status_connect">Connected</string>
+    <string name="ble_status_disconnect">Disconnected</string>
+    <string name="ble_status_faild">Connect failure, try again</string>
+
+    <string name="login_password_error">Error</string>
+
+    <string name="disable">Disabled</string>
+    <string name="ch1">Channel 1</string>
+    <string name="ch2">Channel 2</string>
+    <string name="ch1_ch2">通道1&amp;通道2</string>
+    <string name="submit">Confirmed</string>
+    <string name="out_of_range">Out of Setting Range</string>
+    <string name="perm">未允許此權限，將無法正常運作，是否重新設定權限？</string>
+    <string name="no_support_ble">此設備不支援BLE</string>
+    <string name="ble_disable">請開啟藍芽</string>
+
+    <string-array name="user_permission">
+        <item>User</item>
+        <item>Dealer</item>
+        <item>Administrator</item>
+    </string-array>
+</resources>

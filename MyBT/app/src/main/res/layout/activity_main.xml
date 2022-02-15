@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/new_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <!--  主页面  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="首页"
+            />
+    </LinearLayout>
+
+    <!--  侧边栏  -->
+    <LinearLayout
+        android:id="@+id/drawer_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eda02c"
+        android:layout_gravity="start"
+        >
+        <include layout="@layout/activity_drawer" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="侧边栏"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
