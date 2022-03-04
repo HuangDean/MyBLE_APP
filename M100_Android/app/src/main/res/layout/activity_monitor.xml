@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorTheme"
+        android:minHeight="?attr/actionBarSize" />
+
+    <ImageView
+        android:id="@+id/imgRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/toolbar"
+        android:layout_alignEnd="@id/toolbar"
+        android:layout_alignBottom="@id/toolbar"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_4"
+        app:srcCompat="@drawable/ic_record"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/toolbarLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="false"
+        android:background="#C7C7CC" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvTimeLine"
+        android:layout_below="@+id/toolbarLine"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_10" />
+
+    <TextView
+        android:id="@+id/tvTimeLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvGetDataTimer"
+        android:layout_alignStart="@+id/btnValvePosition"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="@string/monitor_time_line"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvGetDataTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnValvePosition"
+        android:layout_alignStart="@+id/btnValvePosition"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:text="@string/monitor_timer"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <com.xw.repo.BubbleSeekBar
+        android:id="@+id/sbTimeline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/sbGetDataTimer"
+        android:layout_alignTop="@id/tvTimeLine"
+        android:layout_alignEnd="@id/btnTorque"
+        app:bsb_bubble_color="#9ECD64"
+        app:bsb_max="7"
+        app:bsb_min="0"
+        app:bsb_progress="6"
+        app:bsb_second_track_color="#9ECD64"
+        app:bsb_section_count="7"
+        app:bsb_section_text_position="bottom_sides"
+        app:bsb_seek_step_section="true"
+        app:bsb_show_thumb_text="true"
+        app:bsb_track_color="@android:color/darker_gray" />
+
+    <com.xw.repo.BubbleSeekBar
+        android:id="@+id/sbGetDataTimer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvGetDataTimer"
+        android:layout_alignEnd="@id/btnTorque"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_toEndOf="@id/tvGetDataTimer"
+        app:bsb_bubble_color="#9ECD64"
+        app:bsb_max="10"
+        app:bsb_min="1"
+        app:bsb_second_track_color="#9ECD64"
+        app:bsb_section_count="9"
+        app:bsb_section_text_position="bottom_sides"
+        app:bsb_seek_step_section="true"
+        app:bsb_show_thumb_text="true"
+        app:bsb_track_color="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/btnValvePosition"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_above="@+id/btnMortorTempeature"
+        android:layout_alignStart="@id/btnMortorTempeature"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:background="@drawable/button_square_selected"
+        android:text="@string/monitor_position"
+        android:textSize="@dimen/sp_16" />
+
+    <Button
+        android:id="@+id/btnRpm"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_alignBottom="@id/btnValvePosition"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_toEndOf="@id/btnValvePosition"
+        android:background="@drawable/button_square_selected"
+        android:text="@string/monitor_rpm"
+        android:textSize="@dimen/sp_16" />
+
+    <Button
+        android:id="@+id/btnTorque"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_alignBottom="@id/btnRpm"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_toEndOf="@id/btnRpm"
+        android:background="@drawable/button_square_selected"
+        android:text="@string/monitor_torque"
+        android:textSize="@dimen/sp_16" />
+
+    <Button
+        android:id="@+id/btnMortorTempeature"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:background="@drawable/button_square_selected"
+        android:text="@string/monitor_mortor_tempeature"
+        android:textSize="@dimen/sp_16" />
+
+    <Button
+        android:id="@+id/btnModuleTempeature"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_alignBottom="@id/btnMortorTempeature"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_toEndOf="@id/btnMortorTempeature"
+        android:background="@drawable/button_square_selected"
+        android:text="@string/monitor_module_tempeature"
+        android:textSize="@dimen/sp_16" />
+
+</RelativeLayout>

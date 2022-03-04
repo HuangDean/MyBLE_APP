@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvDeviceNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/login_device_name"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvDeviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDeviceNameTitle"
+        android:layout_alignStart="@id/tvDeviceNameTitle"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvUserPermissionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDeviceName"
+        android:layout_alignStart="@id/tvDeviceNameTitle"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/login_user_name"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <Spinner
+        android:id="@+id/spUserPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserPermissionTitle"
+        android:layout_alignStart="@id/tvUserPermissionTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/user_permission" />
+
+    <TextView
+        android:id="@+id/tvPasswordTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spUserPermission"
+        android:layout_alignStart="@id/spUserPermission"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/login_password"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPasswordTitle"
+        android:layout_alignStart="@id/tvPasswordTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:autofillHints="@string/login_password"
+        android:background="@drawable/spinner_background"
+        android:hint="@string/login_password"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtPassword"
+        android:layout_alignStart="@id/edtPassword"
+        android:layout_alignEnd="@id/edtPassword"
+        android:layout_marginTop="@dimen/dp_16">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/login_cancel"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+</RelativeLayout>

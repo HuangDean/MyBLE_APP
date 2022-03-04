@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorTheme"
+        android:minHeight="?attr/actionBarSize" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="false"
+        android:background="#C7C7CC" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="5"
+                tools:listitem="@layout/adapter_submit" />
+
+            <TextView
+                android:id="@+id/tvDetectTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvProduct"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/product_detect_title"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvProduct" />
+
+            <TextView
+                android:id="@+id/tvAI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="AI"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toStartOf="@id/tvDI"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDetectTitle"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/imgAI_1"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                app:layout_constraintEnd_toStartOf="@id/tvAI"
+                app:layout_constraintTop_toBottomOf="@id/tvAI"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgAI_2"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                app:layout_constraintStart_toEndOf="@id/tvAI"
+                app:layout_constraintTop_toBottomOf="@id/tvAI"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvDI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:text="DI"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvAI"
+                app:layout_constraintEnd_toStartOf="@id/tvModbus"
+                app:layout_constraintStart_toEndOf="@id/tvAI"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/imgDI_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/tvDI"
+                app:layout_constraintTop_toBottomOf="@id/tvDI"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgDI_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tvDI"
+                app:layout_constraintTop_toBottomOf="@id/tvDI"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvModbus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modbus"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvAI"
+                app:layout_constraintEnd_toStartOf="@id/tvHart"
+                app:layout_constraintStart_toEndOf="@id/tvDI"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/imgModbus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/tvModbus"
+                app:layout_constraintStart_toStartOf="@id/tvModbus"
+                app:layout_constraintTop_toBottomOf="@id/tvModbus"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/tvHart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hart"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvAI"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvModbus"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/imgHart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/tvHart"
+                app:layout_constraintStart_toStartOf="@id/tvHart"
+                app:layout_constraintTop_toBottomOf="@id/tvHart"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvAO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:text="AO"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="@id/tvAI"
+                app:layout_constraintStart_toStartOf="@id/tvAI"
+                app:layout_constraintTop_toBottomOf="@id/imgAI_1"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/imgAO_1"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                app:layout_constraintEnd_toStartOf="@id/tvAO"
+                app:layout_constraintTop_toBottomOf="@id/tvAO"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgAO_2"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                app:layout_constraintStart_toEndOf="@id/tvAO"
+                app:layout_constraintTop_toBottomOf="@id/tvAO"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvDO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DO"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvAO"
+                app:layout_constraintEnd_toEndOf="@id/tvDI"
+                app:layout_constraintStart_toStartOf="@id/tvDI"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/imgDO_1"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                app:layout_constraintEnd_toStartOf="@id/tvDO"
+                app:layout_constraintTop_toBottomOf="@id/tvDO"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgDO_2"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                app:layout_constraintStart_toEndOf="@id/tvDO"
+                app:layout_constraintTop_toBottomOf="@id/tvDO"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvProfibus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profibus"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvAO"
+                app:layout_constraintEnd_toEndOf="@id/tvModbus"
+                app:layout_constraintStart_toStartOf="@id/tvModbus"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/imgProfibus"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:layout_marginBottom="@dimen/dp_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvProfibus"
+                app:layout_constraintStart_toStartOf="@id/tvProfibus"
+                app:layout_constraintTop_toBottomOf="@id/tvProfibus"
+                app:srcCompat="@drawable/ic_detect_board_normal"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/prograss"
+        layout="@layout/prograss_bar"
+        android:visibility="gone" />
+
+</RelativeLayout>

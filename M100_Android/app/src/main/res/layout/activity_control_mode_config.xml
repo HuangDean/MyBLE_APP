@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorTheme"
+        android:minHeight="?attr/actionBarSize" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="false"
+        android:background="#C7C7CC" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Switch
+                android:id="@+id/swRemoteModeConfig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:switchPadding="@dimen/dp_8"
+                android:text="@string/config_off"
+                android:thumb="@drawable/selector_switch_thumb"
+                android:track="@drawable/selector_switch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:text="@string/control_mode_config_remote_control_mode"
+                android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/swRemoteModeConfig"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/swRemoteModeConfig" />
+
+            <Spinner
+                android:id="@+id/spRemoteModeConfig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/spinner_config_background"
+                android:entries="@array/control_mode_remote_list"
+                app:layout_constraintEnd_toEndOf="@+id/swRemoteModeConfig"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/swRemoteModeConfig"
+                app:layout_goneMarginTop="@dimen/dp_10" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/control_mode_config_input_sensitivity"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/spRemoteModeConfig" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/sbProportional"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                app:bsb_bubble_color="#9ECD64"
+                app:bsb_max="5"
+                app:bsb_min="0"
+                app:bsb_progress="0"
+                app:bsb_second_track_color="#9ECD64"
+                app:bsb_section_count="50"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_seek_step_section="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_track_color="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@+id/spRemoteModeConfig"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/control_mode_config_digital_input"
+                android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/cbDigitalInputChannel"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="@+id/cbDigitalInputChannel" />
+
+            <CheckBox
+                android:id="@+id/cbDigitalInputChannel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:buttonTint="@android:color/holo_red_dark"
+                android:text="@string/config_nc"
+                app:layout_constraintEnd_toEndOf="@+id/sbProportional"
+                app:layout_constraintTop_toBottomOf="@+id/sbProportional" />
+
+            <Button
+                android:id="@+id/btnDigitalInputChannel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@android:color/darker_gray"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/cbDigitalInputChannel"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/cbDigitalInputChannel" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/control_mode_config_proportional_input"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/btnDigitalInputChannel"
+                app:layout_constraintTop_toBottomOf="@+id/btnDigitalInputChannel" />
+
+            <Button
+                android:id="@+id/btnProportionalInputChannel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@android:color/darker_gray"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/btnDigitalInputChannel"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/control_mode_config_proportional_output"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/btnProportionalInputChannel"
+                app:layout_constraintTop_toBottomOf="@+id/btnProportionalInputChannel" />
+
+            <Button
+                android:id="@+id/btnProportionalOutputChannel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@android:color/darker_gray"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/btnProportionalInputChannel"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/tvChannelTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/control_mode_config_signal_input_mode1"
+                app:layout_constraintBottom_toBottomOf="@+id/swChannel"
+                app:layout_constraintStart_toStartOf="@+id/btnProportionalOutputChannel"
+                app:layout_constraintTop_toTopOf="@+id/swChannel" />
+
+            <Switch
+                android:id="@+id/swChannel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:textColor="@android:color/black"
+                android:thumb="@drawable/selector_switch_thumb"
+                android:track="@drawable/selector_switch"
+                app:layout_constraintEnd_toEndOf="@+id/btnProportionalOutputChannel"
+                app:layout_constraintTop_toBottomOf="@+id/btnProportionalOutputChannel" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                app:layout_constraintStart_toStartOf="@+id/tvChannelTitle"
+                app:layout_constraintTop_toTopOf="@+id/textView10"
+                app:srcCompat="@drawable/ic_intput_mode"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="@string/control_mode_config_input_config"
+                app:layout_constraintBottom_toBottomOf="@+id/spInputModeConfig"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/spInputModeConfig" />
+
+            <Spinner
+                android:id="@+id/spInputModeConfig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/spinner_config_background"
+                android:entries="@array/control_mode_list"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@+id/swChannel"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/swChannel" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/textView11"
+                app:srcCompat="@drawable/ic_output_mode"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="@string/control_mode_config_output_config"
+                app:layout_constraintBottom_toBottomOf="@+id/spOutputModeConfig"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/spOutputModeConfig" />
+
+            <Spinner
+                android:id="@+id/spOutputModeConfig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/spinner_config_background"
+                android:entries="@array/control_mode_list"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@+id/spInputModeConfig"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/spInputModeConfig" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/prograss"
+        layout="@layout/prograss_bar"
+        android:visibility="gone" />
+
+</RelativeLayout>

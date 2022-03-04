@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorTheme"
+        android:minHeight="?attr/actionBarSize" />
+
+    <View
+        android:id="@+id/toolbarLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="false"
+        android:background="#C7C7CC" />
+
+    <TextView
+        android:id="@+id/tvTitleCode"
+        android:layout_width="@dimen/dp_46"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarLine"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorTheme"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8"
+        android:text="@string/status_code"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTitleContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvTitleCode"
+        android:layout_alignBottom="@id/tvTitleCode"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tvTitleCode"
+        android:background="@android:color/white"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        android:text="@string/status_code_content"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/tvTitleCode"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/darker_gray" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:overScrollMode="never"
+        tools:listitem="@layout/adapter_status" />
+
+    <include
+        android:id="@+id/prograss"
+        layout="@layout/prograss_bar"
+        android:visibility="gone" />
+
+</RelativeLayout>

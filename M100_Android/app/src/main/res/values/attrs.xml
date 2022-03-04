@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressView">
+        <attr name="radius" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="DashboardView">
+        <attr name="stroke_width" format="dimension" />
+    </declare-styleable>
+</resources>

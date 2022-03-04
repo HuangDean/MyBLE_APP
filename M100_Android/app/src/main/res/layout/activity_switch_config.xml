@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTheme"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/toolbarLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_1"
+        android:background="#C7C7CC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <Switch
+        android:id="@+id/swCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:switchPadding="@dimen/dp_8"
+        android:text="@string/switch_config_close"
+        android:textSize="@dimen/sp_14"
+        android:thumb="@drawable/selector_switch_thumb"
+        android:track="@drawable/selector_switch"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarLine">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                app:layout_constraintBottom_toBottomOf="@+id/customPrograss"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/customPrograss"
+                app:srcCompat="@drawable/ic_valve_close"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvRangeOfEndOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text=" "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="@id/customPrograss"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvRangeOfEndOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvRangeOfEndOff"
+                app:layout_constraintEnd_toEndOf="@id/customPrograss"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <com.sunyeh.m100.custom.ProgressView
+                android:id="@+id/customPrograss"
+                android:layout_width="@dimen/dp_190"
+                android:layout_height="@dimen/dp_40"
+                app:layout_constraintEnd_toStartOf="@id/imageView6"
+                app:layout_constraintStart_toEndOf="@id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/tvRangeOfEndOff"
+                app:radius="5" />
+
+
+            <ImageView
+                android:id="@+id/imgLeftArrow"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginStart="@dimen/dp_26"
+                app:layout_constraintBottom_toBottomOf="@id/customPrograss"
+                app:layout_constraintStart_toStartOf="@id/customPrograss"
+                app:layout_constraintTop_toTopOf="@id/customPrograss"
+                app:srcCompat="@drawable/ic_left_arrow"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgRightArrow"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginEnd="@dimen/dp_26"
+                app:layout_constraintBottom_toBottomOf="@id/customPrograss"
+                app:layout_constraintEnd_toEndOf="@id/customPrograss"
+                app:layout_constraintTop_toTopOf="@id/customPrograss"
+                app:srcCompat="@drawable/ic_right_arrow"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvStrokeOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@id/imgLeftArrow"
+                app:layout_constraintEnd_toEndOf="@+id/imgLeftArrow"
+                app:layout_constraintStart_toStartOf="@+id/imgLeftArrow"
+                app:layout_constraintTop_toTopOf="@+id/imgLeftArrow"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvStrokeOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:text=" "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@id/imgRightArrow"
+                app:layout_constraintEnd_toEndOf="@+id/imgRightArrow"
+                app:layout_constraintStart_toStartOf="@+id/imgRightArrow"
+                app:layout_constraintTop_toTopOf="@+id/imgRightArrow"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:layout_constraintBottom_toBottomOf="@+id/customPrograss"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/customPrograss"
+                app:srcCompat="@drawable/ic_valve_open"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_24"
+                android:text="@string/switch_config_output_rpm"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/sbOutputRpm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:bsb_bubble_color="#9ECD64"
+                app:bsb_max="4"
+                app:bsb_second_track_color="#9ECD64"
+                app:bsb_section_count="4"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_seek_step_section="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_track_color="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/switch_config_ungent_rpm"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/sbUngentRpm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:bsb_bubble_color="#9ECD64"
+                app:bsb_max="4"
+                app:bsb_second_track_color="#9ECD64"
+                app:bsb_section_count="4"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_seek_step_section="true"
+                app:bsb_show_thumb_text="true"
+                android:layout_marginStart="@dimen/dp_16"
+                app:bsb_track_color="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                app:layout_constraintEnd_toEndOf="@+id/sbOutputRpm"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/switch_config_range_of_end"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/sbRangeOfEnd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:bsb_bubble_color="#9ECD64"
+                app:bsb_max="20"
+                app:bsb_min="2"
+                app:bsb_second_track_color="#9ECD64"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_thumb_text="true"
+                app:bsb_track_color="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/textView13"
+                app:layout_constraintEnd_toEndOf="@+id/sbUngentRpm"
+                app:layout_constraintStart_toStartOf="@+id/sbUngentRpm"
+                app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/switch_config_limit"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/tvLimitPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00000"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBaseline_toBaselineOf="@id/textView14"
+                app:layout_constraintStart_toStartOf="@+id/spRetry"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_config_torque_retry"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/spRetry"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toTopOf="@+id/spRetry" />
+
+            <Spinner
+                android:id="@+id/spRetry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@drawable/spinner_config_background"
+                android:entries="@array/switch_torque_retry_list"
+                app:layout_constraintEnd_toEndOf="@+id/sbRangeOfEnd"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintTop_toBottomOf="@+id/tvLimitPosition" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_config_range_of_end_mode"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/spRangeOfEndMode"
+                app:layout_constraintStart_toStartOf="@+id/textView16"
+                app:layout_constraintTop_toTopOf="@+id/spRangeOfEndMode" />
+
+            <Spinner
+                android:id="@+id/spRangeOfEndMode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/spinner_config_background"
+                android:entries="@array/switch_range_of_end_mode_list"
+                app:layout_constraintEnd_toEndOf="@+id/spRetry"
+                app:layout_constraintStart_toStartOf="@+id/spRetry"
+                app:layout_constraintTop_toBottomOf="@+id/spRetry" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_config_range_of_end_torque"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/spRangeOfEndTorque"
+                app:layout_constraintStart_toStartOf="@+id/textView17"
+                app:layout_constraintTop_toTopOf="@+id/spRangeOfEndTorque" />
+
+            <Spinner
+                android:id="@+id/spRangeOfEndTorque"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/spinner_config_background"
+                android:entries="@array/switch_range_of_end_torque_list"
+                app:layout_constraintEnd_toEndOf="@+id/spRangeOfEndMode"
+                app:layout_constraintStart_toStartOf="@+id/spRangeOfEndMode"
+                app:layout_constraintTop_toBottomOf="@+id/spRangeOfEndMode" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_config_stroke_torque"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/spRangeOfEndStroke"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toTopOf="@+id/spRangeOfEndStroke"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Spinner
+                android:id="@+id/spRangeOfEndStroke"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/spinner_config_background"
+                android:entries="@array/switch_range_of_end_torque_list"
+                app:layout_constraintEnd_toEndOf="@+id/spRangeOfEndTorque"
+                app:layout_constraintStart_toStartOf="@+id/spRangeOfEndTorque"
+                app:layout_constraintTop_toBottomOf="@+id/spRangeOfEndTorque" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@id/spRangeOfEndStroke"
+                app:layout_constraintStart_toStartOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@id/spRangeOfEndStroke" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/switch_config_close_tightly"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_config_close_definition"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/spCloseDefinition"
+                app:layout_constraintStart_toStartOf="@+id/textView20"
+                app:layout_constraintTop_toTopOf="@+id/spCloseDefinition" />
+
+            <Switch
+                android:id="@+id/swCloseTighly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:switchPadding="@dimen/dp_8"
+                android:text="@string/config_off"
+                android:thumb="@drawable/selector_switch_thumb"
+                android:track="@drawable/selector_switch"
+                app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+            <Spinner
+                android:id="@+id/spCloseDefinition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:background="@drawable/spinner_config_background"
+                android:entries="@array/switch_config_close_definition"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spRangeOfEndStroke"
+                app:layout_constraintStart_toEndOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@id/swCloseTighly" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/prograss"
+        layout="@layout/prograss_bar"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

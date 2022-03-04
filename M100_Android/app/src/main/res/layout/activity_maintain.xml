@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorTheme"
+        android:minHeight="?attr/actionBarSize" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="false"
+        android:background="#C7C7CC" />
+
+    <TextView
+        android:id="@+id/tvSystemWorkingHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="@string/maintain_system_working"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvMotorWorkingHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSystemWorkingHours"
+        android:layout_alignStart="@id/tvSystemWorkingHours"
+        android:layout_alignEnd="@id/tvSystemWorkingHours"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/maintain_motor_working"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTorqueRemainingTimesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMotorWorkingHours"
+        android:layout_alignStart="@+id/tvMotorWorkingHours"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/maintain_torque_remaining_times"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvValveRemainingTimesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTorqueRemainingTimesTitle"
+        android:layout_alignStart="@+id/tvMotorWorkingHours"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/maintain_valve_remaining_times"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvMotorRemainingTimesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvValveRemainingTimesTitle"
+        android:layout_alignStart="@+id/tvMotorWorkingHours"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:text="@string/maintain_motor_remaining_times"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTorqueRemainingTimes"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTorqueRemainingTimesTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_toEndOf="@id/tvTorqueRemainingTimesTitle"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvValveRemainingTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvValveRemainingTimesTitle"
+        android:layout_alignStart="@+id/tvTorqueRemainingTimes"
+        android:layout_alignEnd="@+id/tvTorqueRemainingTimes"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvMotorRemainingTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvMotorRemainingTimesTitle"
+        android:layout_alignEnd="@+id/tvTorqueRemainingTimes"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_toEndOf="@id/tvMotorRemainingTimesTitle"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/tvMotorRemainingTimesTitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvTotalTorqueOffCountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_alignStart="@+id/tvMotorWorkingHours"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="@string/maintain_total_torque_off_count"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+
+    <TextView
+        android:id="@+id/tvTotalValveOnCountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTotalTorqueOffCountTitle"
+        android:layout_alignStart="@+id/tvMotorWorkingHours"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="@string/maintain_total_valve_on_count"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTotalValveOffCountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTotalValveOnCountTitle"
+        android:layout_alignStart="@+id/tvMotorWorkingHours"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="@string/maintain_total_valve_off"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTotalTorqueAllOnTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTotalValveOffCountTitle"
+        android:layout_alignStart="@+id/tvMotorWorkingHours"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="@string/maintain_total_torque_all_on"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTotalTorqueAllOffTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTotalTorqueAllOnTitle"
+        android:layout_alignStart="@+id/tvMotorWorkingHours"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="@string/maintain_total_torque_all_off"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTotalTorqueOffCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTotalTorqueOffCountTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTotalValveOnCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvTotalValveOnCountTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTotalValveOffCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvTotalValveOffCountTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTotalTorqueAllOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvTotalTorqueAllOnTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvTotalTorqueAllOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvTotalTorqueAllOffTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16" />
+</RelativeLayout>

@@ -1,0 +1,363 @@
+<resources>
+    <string name="app_name">SUNYEH</string>
+
+    <string name="main_rpm">RPM</string>
+    <string name="main_version">Version V1.0</string>
+    <string name="main_open">Open</string>
+    <string name="main_stop">Stop</string>
+    <string name="main_close">Close</string>
+
+    <string name="side_title">Device List</string>
+    <string name="side_last_connect">Last Connect：</string>
+    <string name="side_quick_connect">Quick Connect</string>
+
+    <string name="login">登入</string>
+    <string name="login_device_name">裝置名稱</string>
+    <string name="login_user_name">使用者權限</string>
+    <string name="login_password">密碼</string>
+    <string name="login_cancel">取消</string>
+    <string name="login_password_empty">請填入密碼</string>
+
+    <string name="status_title_maintain">維護訊息</string>
+    <string name="status_code">代碼</string>
+    <string name="status_code_content">內容</string>
+    <string name="status_title_system">系統狀態</string>
+
+    <string-array name="status_array">
+        <item>準備完成</item>
+        <item>緊急功能開啟</item>
+        <item>故障</item>
+        <item>極限位置設定完成</item>
+        <item>手輪已開啟</item>
+        <item>可以進行遠端控制</item>
+        <item>全關位置</item>
+        <item>全開位置</item>
+        <item>關向扭力過載</item>
+        <item>開向扭力過載</item>
+        <item>關閉中</item>
+        <item>開啟中</item>
+        <item>訊號開路, 運轉至預設位置</item>
+        <item>「緊急」命令作用中</item>
+        <item>馬達過熱(限速)</item>
+        <item>馬達過熱保護</item>
+        <item>需進行維護</item>
+        <item>藍芽模組連線中</item>
+        <item>重試中</item>
+        <item>重試中(反轉)</item>
+        <item></item>
+    </string-array>
+
+    <string name="status_title_error">警報紀錄</string>
+    <string-array name="error_array">
+        <item>螢幕過熱</item>
+        <item>主板過熱</item>
+        <item>馬達問度過熱(馬達降速)</item>
+        <item>馬達過熱(停止)</item>
+        <item>馬達驅動模組過熱</item>
+        <item>電池電壓過低</item>
+        <item>未安裝電池</item>
+        <item>電源故障</item>
+        <item>電源欠相</item>
+        <item>電源電壓過高</item>
+        <item>電源電壓過低</item>
+        <item>超過極限範圍</item>
+        <item>扭力過載</item>
+        <item>編碼器故障</item>
+        <item>馬達溫度感測故障</item>
+        <item>螢幕溫度感測故障</item>
+        <item>主板溫度感測故障</item>
+        <item>手動操作故障</item>
+        <item>數位輸入故障</item>
+        <item>數位輸出故障</item>
+        <item>類比輸入故障</item>
+        <item>類比輸出故障</item>
+        <item>記憶體存取故障</item>
+        <item>馬達通訊錯誤</item>
+        <item>Modbus通訊錯誤</item>
+        <item>馬達運轉錯誤</item>
+        <item>內部控制電源異常</item>
+        <item>Profibus通訊錯誤</item>
+        <item>備用編碼器故障</item>
+        <item>位置偵測錯誤</item>
+    </string-array>
+
+    <string name="maintain_system_working">開機計時</string>
+    <string name="maintain_motor_working">馬達運轉計時</string>
+    <string name="maintain_system_working_hours">開機計時：%02d天%02d小時%02d分%02d秒</string>
+    <string name="maintain_motor_working_hours">馬達運轉計時：%02d天%02d小時%02d分%02d秒</string>
+    <string name="maintain_date_format">%02d天%02d時%02d分%02d秒</string>
+    <string name="maintain_day">天</string>
+    <string name="maintain_hours">小時</string>
+    <string name="maintain_min">分</string>
+    <string name="maintain_sec">秒</string>
+    <string name="maintain_count">次</string>
+    <string name="maintain_torque_remaining_times">允許扭力過載剩餘次數：</string>
+    <string name="maintain_valve_remaining_times">開關剩餘次數：</string>
+    <string name="maintain_motor_remaining_times">馬達維護到期剩餘時數：</string>
+    <string name="maintain_total_torque_off_count">扭力過載累計次數：</string>
+    <string name="maintain_total_valve_on_count">開向累計次數：</string>
+    <string name="maintain_total_valve_off">關向累計次數：</string>
+    <string name="maintain_total_torque_all_on">全開累計次數 ：</string>
+    <string name="maintain_total_torque_all_off">全關累計次數 ：</string>
+
+    <string name="monitor_title">即時監控</string>
+    <string name="monitor_time_line">時間軸</string>
+    <string name="monitor_timer">取樣速度(s)</string>
+    <string name="monitor_position">位置</string>
+    <string name="monitor_rpm">轉速</string>
+    <string name="monitor_torque">扭力</string>
+    <string name="monitor_mortor_tempeature">馬達溫度</string>
+    <string name="monitor_module_tempeature">驅動模組溫度</string>
+
+    <string name="remote_title">遠端控制</string>
+
+    <string name="setting_title">系統設定</string>
+    <string name="setting_product_config">產品資訊</string>
+    <string name="setting_maintain_config">維護週期設定</string>
+    <string name="setting_system_config">電控系統狀態</string>
+    <string name="setting_ungent_config">緊急狀態運轉設定</string>
+    <string name="setting_switch_config">開(關)向設定</string>
+    <string name="setting_control_mode_config">控制模式設定</string>
+    <string name="setting_output_config">電譯接點設定</string>
+
+    <string-array name="product_title">
+        <item>Modbus Address</item>
+        <item>Modbus BaudRate</item>
+        <item>Profibus Address</item>
+        <item>齒輪箱</item>
+        <item>原廠型號</item>
+        <item>原廠序號</item>
+        <item>型號</item>
+        <item>序號</item>
+    </string-array>
+
+    <string-array name="product_title2">
+        <item>Modbus Address</item>
+        <item>Modbus BaudRate</item>
+        <item>Profibus Address</item>
+        <item>型號</item>
+        <item>序號</item>
+    </string-array>
+
+    <string name="product_config_modbus_id">Modbus Address</string>
+    <string name="product_config_baund_rate">Modbus BaudRate</string>
+    <string name="product_config_profibus_address">Profibus Address</string>
+    <string name="product_config_gear">齒輪箱</string>
+    <string name="product_config_oem_type">原廠型號</string>
+    <string name="product_config_oem_serial">原廠序號</string>
+    <string name="product_config_dealer_type">型號</string>
+    <string name="product_config_dealer_serial">序號</string>
+    <string name="product_detect_title">模組安裝狀態</string>
+    <string name="product_detect_board_ai">A/I</string>
+    <string name="product_detect_board_di">D/I</string>
+    <string name="product_detect_board_modbus">Modbus</string>
+    <string name="product_detect_board_hart">Hart</string>
+    <string name="product_detect_board_ao">A/O</string>
+    <string name="product_detect_board_do">D/O</string>
+    <string name="product_detect_board_profibuso">Profibus</string>
+
+    <string-array name="maintain_title">
+        <item>啟動次數</item>
+        <item>扭力過載次數</item>
+        <item>馬達運轉時數</item>
+    </string-array>
+
+    <string name="maintain_config_title">維護週期設定</string>
+    <string name="maintain_config_switchTimes">啟動次數</string>
+    <string name="maintain_config_torqueTimes">扭力過載次數</string>
+    <string name="maintain_config_motorWorkTime">馬達運轉時數</string>
+
+    <string-array name="system_title">
+        <item>語系</item>
+        <item>關向燈號定義</item>
+        <item>最大輸出扭力</item>
+        <item>AC電源相位</item>
+        <item>AC電壓設定</item>
+    </string-array>
+
+    <string-array name="system_title2">
+        <item>語言設定</item>
+        <item>關向燈號定義</item>
+    </string-array>
+
+
+    <string name="system_config_title">電控系統設定</string>
+    <string name="system_config_english">English</string>
+    <string name="system_config_chinese_traditional">繁體中文</string>
+    <string name="system_config_chinese_simplified">簡體中文</string>
+    <string name="system_config_red_light">紅燈</string>
+    <string name="system_config_red_green">綠燈</string>
+    <string name="system_config_three_phase">三相電壓</string>
+    <string name="system_config_signle_phase">單相電壓</string>
+    <string name="system_config_language">語系</string>
+    <string name="system_config_lightDefinition">關向燈號定義</string>
+    <string name="system_config_max_output_torque">最大輸出扭力</string>
+    <string name="system_config_ac_voltage_phase">AC電源相位</string>
+    <string name="system_config_ac_voltage_config">AC電壓設定</string>
+
+    <string-array name="ungent_title">
+        <item>訊號開路執行動作</item>
+        <item>緊急狀態執行動作</item>
+        <item>訊號開路緊急位置</item>
+        <item>馬達溫度警報</item>
+    </string-array>
+
+    <string name="ungent_config_title">緊急狀態運轉設定</string>
+    <string name="ungent_config_open_signal_action1">保持最後位置</string>
+    <string name="ungent_config_open_signal_action2">運轉至緊急位置</string>
+    <string name="ungent_config_open_signal_action3">運轉至預設位置</string>
+    <string name="ungent_config_ungent_action1">運轉至全關</string>
+    <string name="ungent_config_ungent_action2">運轉至全開</string>
+    <string name="ungent_config_ungent_action3">停止運轉</string>
+    <string name="ungent_config_ungent_action4">關閉緊急功能</string>
+    <string name="ungent_config_open_signal_action">訊號開路執行動作</string>
+    <string name="ungent_config_ungent_action">緊急狀態執行動作</string>
+    <string name="ungent_config_signal_ungent_position">訊號開路緊急位置</string>
+    <string name="ungent_config_motorWarning_tempeature">馬達溫度警報</string>
+    <string name="ungent_config_ungent_intput_mode">緊急狀態訊號設定</string>
+
+    <string name="switch_config_title">開(關)向設定</string>
+    <string name="switch_config_range_of_end_mode1">扭力優先</string>
+    <string name="switch_config_range_of_end_mode2">位置優先</string>
+    <string name="switch_config_output_rpm">輸出轉速(LV)</string>
+    <string name="switch_config_ungent_rpm">緊急轉速(LV)</string>
+    <string name="switch_config_range_of_end">末端範圍(%)</string>
+    <string name="switch_config_limit">極限位置參數值</string>
+    <string name="switch_config_torque_retry">扭力過載重試次數</string>
+    <string name="switch_config_range_of_end_mode">末端停止模式</string>
+    <string name="switch_config_range_of_end_torque">末端停止扭力</string>
+    <string name="switch_config_stroke_torque">中間行程過載扭力</string>
+    <string name="switch_config_close_tightly">關緊功能</string>
+    <string name="switch_config_close_definition">關方向定義</string>
+    <string name="switch_config_close">關向</string>
+    <string name="switch_config_open">開向</string>
+
+    <string-array name="switch_torque_retry_list">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="switch_range_of_end_mode_list">
+        <item>扭力優先</item>
+        <item>位置優先</item>
+    </string-array>
+
+    <string-array name="switch_range_of_end_torque_list">
+        <item>30%</item>
+        <item>40%</item>
+        <item>50%</item>
+        <item>60%</item>
+        <item>70%</item>
+        <item>80%</item>
+        <item>90%</item>
+        <item>100%</item>
+    </string-array>
+
+    <string-array name="switch_config_close_definition">
+        <item>CCW</item>
+        <item>CW</item>
+    </string-array>
+
+    <string name="control_mode_config_title">控制模式設定</string>
+    <string name="control_mode_config_remote_control_mode">遠控模式設定</string>
+    <string name="control_mode_config_input_sensitivity">AI靈敏度設定</string>
+    <string name="control_mode_config_digital_input">數位輸入通道</string>
+    <string name="control_mode_config_proportional_input">類比輸入通道</string>
+    <string name="control_mode_config_proportional_output">類比輸出通道</string>
+    <string name="control_mode_config_input_config">輸入訊號類型</string>
+    <string name="control_mode_config_output_config">輸出訊號類型</string>
+    <string name="control_mode_config_signal_input_mode1">類比訊號類型(通道1)</string>
+    <string name="control_mode_config_signal_input_mode2">類比訊號類型(通道2)</string>
+
+    <string-array name="control_mode_remote_list">
+        <item>數位持續輸入</item>
+        <item>數位脈衝輸入</item>
+        <item>類比輸入</item>
+        <item>Modbus</item>
+        <item>Profibus</item>
+    </string-array>
+
+    <string-array name="control_mode_list">
+        <item>0~20mA</item>
+        <item>4~20mA</item>
+        <item>0~5V</item>
+        <item>1~5V</item>
+        <item>0~10V</item>
+        <item>2~10V</item>
+    </string-array>
+
+    <string name="output_config_title">電譯接點設定</string>
+    <string name="output_config_output_config_mode_1">無輸出</string>
+    <string name="output_config_output_config_mode_2">運轉至全關</string>
+    <string name="output_config_output_config_mode_3">運轉至全開</string>
+    <string name="output_config_output_config_mode_4">扭力過載停止 (關向)</string>
+    <string name="output_config_output_config_mode_5">扭力過載停止 (開向)</string>
+    <string name="output_config_output_config_mode_6">開關向扭力過載停止</string>
+    <string name="output_config_output_config_mode_7">故障</string>
+    <string name="output_config_output_config_mode_8">訊號閃爍</string>
+    <string name="output_config_output_config_mode_9">準備完成</string>
+    <string name="output_config_output_config_mode_10">遠控選定</string>
+    <string name="output_config_output_config_mode_11">馬達過熱停止</string>
+    <string name="output_config_output_config_mode_12">馬達過熱警報</string>
+    <string name="output_config_output_config_mode_13">維護警報</string>
+    <string name="output_config_output_config_mode_14">關閉中</string>
+    <string name="output_config_output_config_mode_15">開啟中</string>
+    <string name="output_config_output_config_mode_16">數位輸入故障</string>
+    <string name="output_config_output_config_mode_17">類比輸入故障</string>
+    <string name="output_config_output">電譯接點</string>
+    <string name="output_config_digital_output_channel">數位輸出通道</string>
+
+    <string-array name="output_config_list">
+        <item>無輸出</item>
+        <item>運轉至全關</item>
+        <item>運轉至全開</item>
+        <item>扭力過載停止(關向)</item>
+        <item>扭力過載停止(開向)</item>
+        <item>開關向扭力過載停止</item>
+        <item>故障</item>
+        <item>訊號閃爍</item>
+        <item>準備完成</item>
+        <item>遠控選定</item>
+        <item>馬達過熱停止</item>
+        <item>馬達過熱警報</item>
+        <item>維護警報</item>
+        <item>關閉中</item>
+        <item>開啟中</item>
+        <item>數位輸入故障</item>
+        <item>類比輸入故障</item>
+    </string-array>
+
+    <string name="config_sent">Sent</string>
+    <string name="config_placeholder">請選擇…</string>
+    <string name="config_off">關</string>
+    <string name="config_on">開</string>
+    <string name="config_determine">確定</string>
+    <string name="config_no">NO</string>
+    <string name="config_nc">NC</string>
+
+    <string name="ble_status_connect">連線成功</string>
+    <string name="ble_status_disconnect">連線已斷開</string>
+    <string name="ble_status_faild">連線失敗，請重試</string>
+
+    <string name="login_password_error">密碼錯誤</string>
+
+    <string name="disable">停用</string>
+    <string name="ch1">通道1</string>
+    <string name="ch2">通道2</string>
+    <string name="ch1_ch2">通道1&amp;通道2</string>
+    <string name="submit">確定</string>
+    <string name="out_of_range">該值已超過設定範圍</string>
+    <string name="perm">未允許此權限，將無法正常運作，是否重新設定權限？</string>
+    <string name="no_support_ble">此設備不支援BLE</string>
+    <string name="ble_disable">請開啟藍芽</string>
+
+    <string-array name="user_permission">
+        <item>使用者</item>
+        <item>經銷商</item>
+        <item>管理者</item>
+    </string-array>
+</resources>

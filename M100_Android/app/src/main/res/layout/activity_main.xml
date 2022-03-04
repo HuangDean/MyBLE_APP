@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MainActivity">
+    <!--    tools:openDrawer="start"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewSunyeh"
+            android:layout_width="@dimen/dp_89"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_24"
+            app:srcCompat="@drawable/img_sunyeh"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imgConnectStatus"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_27"
+            android:layout_toEndOf="@id/imageViewSunyeh"
+            app:srcCompat="@drawable/ic_red_ball"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imgMotor"
+            android:layout_width="@dimen/dp_312"
+            android:layout_height="@dimen/dp_234"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_6"
+            app:srcCompat="@drawable/img_motor"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/imgModuleTemperature"
+            android:layout_alignEnd="@id/imgModuleTemperature"
+            android:layout_marginBottom="@dimen/dp_m_8"
+            android:text="℃"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_16"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/imgModuleTemperature"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_100"
+            android:layout_alignStart="@+id/imgMotor"
+            android:layout_alignBottom="@id/imgMotor"
+            android:layout_marginStart="@dimen/dp_m_25"
+            android:layout_marginBottom="@dimen/dp_40"
+            app:srcCompat="@drawable/img_thermometer0"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvModuleTemperature"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignStart="@id/imgModuleTemperature"
+            android:layout_alignBottom="@id/imgModuleTemperature"
+            android:layout_marginStart="@dimen/dp_13"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:gravity="center"
+            android:text="00"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_11"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/imgSystemStatus"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignStart="@+id/imgMotor"
+            android:layout_alignTop="@+id/imgMotor"
+            android:layout_marginStart="@dimen/dp_46"
+            android:layout_marginTop="@dimen/dp_68"
+            app:srcCompat="@drawable/ic_system_status"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imgMaintain"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_55"
+            android:layout_alignStart="@id/imgMotor"
+            android:layout_alignTop="@id/imgMotor"
+            android:layout_marginStart="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp_130"
+            app:srcCompat="@drawable/maintain"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imgMotorTemperature"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_100"
+            android:layout_alignStart="@id/imgMotor"
+            android:layout_alignTop="@id/imgMotor"
+            android:layout_marginStart="@dimen/dp_107"
+            android:layout_marginTop="@dimen/dp_10"
+            app:srcCompat="@drawable/img_thermometer0"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imgMotorTemperature"
+            android:layout_alignEnd="@id/imgMotorTemperature"
+            android:layout_marginTop="@dimen/dp_m_8"
+            android:text="℃"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_16"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvMotorTemperature"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignStart="@id/imgMotorTemperature"
+            android:layout_alignBottom="@id/imgMotorTemperature"
+            android:layout_marginStart="@dimen/dp_13"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:gravity="center"
+            android:text="00"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_11"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/imgSystemError"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignStart="@id/imgMotor"
+            android:layout_alignTop="@id/imgMotor"
+            android:layout_marginStart="@dimen/dp_190"
+            android:layout_marginTop="@dimen/dp_127"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_warning"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imgRpm"
+            android:layout_width="@dimen/dp_142"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignStart="@id/imgMotor"
+            android:layout_alignTop="@id/imgMotor"
+            android:layout_marginStart="@dimen/dp_165"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/img_rpm"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvRpm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/imgRpm"
+            android:layout_alignTop="@id/imgRpm"
+            android:layout_marginStart="@dimen/dp_46"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="0 RPM"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_18"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/imgSide"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_menu_instruction"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/linearFeature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgMotor"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/imgDisconnect"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_46"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_disconnect"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgSetting"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_51"
+                android:layout_weight="1"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_setting"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgMonitor"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_52"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_monitor"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgControl"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_control"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <com.sunyeh.m100.custom.DashboardView
+            android:id="@+id/dashboardView"
+            android:layout_width="@dimen/dp_360"
+            android:layout_height="@dimen/dp_263"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:stroke_width="@dimen/dp_4" />
+
+        <TextView
+            android:id="@+id/tvValveStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_14"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/main_open"
+            android:textColor="@color/colorYellow"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvValveStatus"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="@string/main_version"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/prograss"
+        layout="@layout/prograss_bar"
+        android:visibility="gone" />
+
+    <include layout="@layout/activity_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorTheme"
+        android:minHeight="?attr/actionBarSize" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="false"
+        android:background="#C7C7CC" />
+
+    <ImageView
+        android:id="@+id/imageControl"
+        android:layout_width="@dimen/dp_360"
+        android:layout_height="@dimen/dp_209"
+        android:layout_below="@id/line"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/img_remote_control"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_72"
+        android:layout_alignStart="@id/imageControl"
+        android:layout_alignTop="@id/imageControl"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_69"
+        android:background="@drawable/button_circle_selected" />
+
+    <Button
+        android:id="@+id/btnPrev"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_72"
+        android:layout_alignStart="@id/imageControl"
+        android:layout_alignTop="@id/imageControl"
+        android:layout_marginStart="@dimen/dp_101"
+        android:layout_marginTop="@dimen/dp_107"
+        android:background="@drawable/button_circle_selected" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_72"
+        android:layout_alignStart="@id/imageControl"
+        android:layout_alignTop="@id/imageControl"
+        android:layout_marginStart="@dimen/dp_193"
+        android:layout_marginTop="@dimen/dp_103"
+        android:background="@drawable/button_circle_selected" />
+
+    <Button
+        android:id="@+id/btnEnter"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_72"
+        android:layout_alignStart="@id/imageControl"
+        android:layout_alignTop="@id/imageControl"
+        android:layout_marginStart="@dimen/dp_283"
+        android:layout_marginTop="@dimen/dp_64"
+        android:background="@drawable/button_circle_selected" />
+
+    <ImageView
+        android:id="@+id/imgMotorRpm"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_below="@id/imageControl"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_8"
+        app:srcCompat="@drawable/ic_motor_rpm"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvRpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imgMotorRpm"
+        android:layout_alignBottom="@id/imgMotorRpm"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_toEndOf="@id/imgMotorRpm"
+        android:gravity="center"
+        android:text="0 RPM"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_14"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imgMotorTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_below="@id/imgMotorRpm"
+        android:layout_alignStart="@id/imgMotorRpm"
+        android:layout_alignEnd="@id/imgMotorRpm"
+        android:layout_marginTop="@dimen/dp_8"
+        app:srcCompat="@drawable/ic_temp_meter"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imgMotorTemp"
+        android:layout_alignEnd="@id/tvRpm"
+        android:layout_alignBottom="@id/imgMotorTemp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_toEndOf="@id/imgMotorTemp"
+        android:gravity="end|center_vertical"
+        android:paddingStart="@dimen/dp_0"
+        android:paddingEnd="@dimen/dp_8"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_14" />
+
+    <ProgressBar
+        android:id="@+id/pbTemp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvTemp"
+        android:layout_alignTop="@id/tvTemp"
+        android:layout_alignEnd="@id/tvTemp"
+        android:layout_alignBottom="@id/tvTemp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_55"
+        android:max="100"
+        android:progressTint="@android:color/holo_orange_dark" />
+
+    <com.sunyeh.m100.custom.DashboardView
+        android:id="@+id/dashboardView"
+        android:layout_width="@dimen/dp_310"
+        android:layout_height="@dimen/dp_234"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:stroke_width="@dimen/dp_4" />
+
+    <TextView
+        android:id="@+id/tvValveStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:paddingStart="@dimen/dp_14"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_10"
+        android:text="@string/main_open"
+        android:textColor="@color/colorYellow"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvValveStatus"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:text="@string/main_version"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/sp_14"
+        tools:ignore="RelativeOverlap" />
+
+</RelativeLayout>
